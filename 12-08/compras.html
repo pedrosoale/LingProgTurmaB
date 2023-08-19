@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+  var preco = Number(prompt("Preço do produto."))
+
+  var perc = preco * 0.10
+
+  var aVista = preco - perc
+  var aPrazo = (preco + perc) / 3
+
+  alert(`Preço: R$ ${preco.toFixed(2)}
+  \nÀ vista: R$ ${aVista.toFixed(2)}
+  \nOu 3x de: R$ ${aPrazo.toFixed(2)}`)
+</script>
