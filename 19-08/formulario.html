@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementos de Formulário</title>
+</head>
+<body>
+  <form>
+    <p>
+      <label for="texto">Campo de texto:</label>
+      <input type="text" placeholder="Insira um texto">
+    </p>
+
+    <p>
+      <label for="texto2">Campo somente para leitura:</label>
+      <input readonly name="texto2" value="Não editável">
+    </p>
+
+    <p>
+      <label for="num">Campo numérico:</label>
+      <input type="number">
+    </p>
+
+    <p>
+      <label for="data">Campo de data:</label>
+      <input type="date">
+    </p>
+
+    <p>
+      <label for="arquivo">Campo de arquivo:</label>
+      <input type="file">
+    </p>
+
+    <p>
+      Escolha sim ou não:<br/>
+      <label><input name="radio" type="radio" value="1">Sim</label>
+      <label><input name="radio" type="radio" value="0">Não</label>
+    </p>
+
+    <p>
+      Escolha todas as frutas que você gosta: <br/>
+      <label><input type="checkbox" name="check" value="1">Banana</label>
+      <label><input type="checkbox" name="check" value="2">Morango</label>
+      <label><input type="checkbox" name="check" value="3">Abacate</label>
+      <label><input type="checkbox" name="check" value="4">Manga</label>
+      <label><input type="checkbox" name="check" value="5">Laranja</label>
+    </p>
+
+    <p>
+      <label for="tarea">Área de texto:</label>
+      <textarea 
+        name="texto3" 
+        id="txt" 
+        cols="30" 
+        rows="10" 
+        placeholder="insira aqui seu texto"></textarea>
+    </p>
+
+    <p><input type="submit"value="Enviar Formulário"></p>
+  </form>
+</body>
+</html>
