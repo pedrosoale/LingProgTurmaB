@@ -1,0 +1,24 @@
+<script>
+  do {
+    var numero = Number(prompt("Número: "))
+    if(numero == 0 || isNaN(numero)) {
+      alert("Insira um número válido")
+    }
+  } while(numero == 0 || isNaN(numero))
+
+  // declarr e inicializar a variável para exibir os números pares
+  var pares = "Números pares entre 1 e " + numero + ": "
+
+  // isolar o primeiro número par (para evitar a última vírgula)
+  if(numero > 1) {
+    pares = pares + "2"
+  }
+
+  // laço para acumular os números pares (iniciar em 4, pois o 2 já foi atribuído)
+  for(var i = 4; i <= numero; i = i + 2) {
+    pares = pares + ", " + i
+  }
+
+  alert(pares)
+
+</script>

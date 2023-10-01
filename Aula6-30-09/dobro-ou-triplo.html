@@ -1,0 +1,26 @@
+<script>
+  alert("Digite 0 para sair.")
+
+  // inicio da repetição
+  do {
+    var numero = Number(prompt("Número: "))
+
+    if ( numero == 0 || isNaN(numero)) {
+      var sair = confirm("Confirma saída?") // solicitando confirmação do usuário
+      if(sair) {
+        break // sair da repetição
+      } else {
+        continue // volta ao início do laço
+      }
+    }
+
+    if (numero % 2 == 0) {
+      alert(`O dobro de ${numero} é ${numero * 2}`)
+    } else {
+      alert(`O triplo de ${numero} é ${numero * 3}`)
+    }
+  } while (true)  // enquanto verdade (só sai do laço pelo break)
+
+  alert("Bye, bye...")
+
+</script>
