@@ -32,10 +32,36 @@ function apostarNumero() {
     btJogar.className = "exibe"
     outDica.textContent = "Parabéns! Número sorteado: " + sorteado
   } else {
-    
+    // Se número existe no vetor erros
+    if(erros.indexOf(numero) >= 0){
+      alert("Você já apostou o número " + numero + ". Tente outro...")
+    } else {
+      erros.push(numero); // adiciona número ao vetor
+      var numErros = erros.length // obtém o tamanho do vetor
+      var numChances = CHANCES - numErros // Calcula número de chances
+      // Exibe número de erros , conteúdo do vetor e número de chances
+      outErros.textContent = numErros + " (" + erros.join(", ") + ")"
+      outChances.textContent = numChances
+      if(numChances == 0) {
+        alert("Suas chances terminaram. Tente outra vez!")
+        btApostar.disabled = true
+        btJogar.className = "exibe"
+        outDica.textContent = "Game over! Número sorteado: " + numero
+      } else {
+        var dica = numero < sorteado ? "maior" : "menor"
+        outDica.textContent = "Dica: tente um número " + dica + " que " + numero
+      }
+    }
   }
-
-
+  // Limpa campo de entrada e posiciona cursor neste campo
+  inNumero.value = ""
+  inNumero.focus()
 }
 var btApostar = document.getElementById("btApostar")
 btApostar.addEventListener("click", apostarNumero)
+
+function jogarNovamente() {
+  location.reload()   // recarrega a página
+}
+var btJogar = document.getElementById("btJogar")
+btJogar.addEventListener("click", jogarNovamente)
